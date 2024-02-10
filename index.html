@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>IBOSS</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var heroSection = document.querySelector(".hero");
+        var scrollPosition = window.pageYOffset;
+        var sectionPosition =
+          heroSection.getBoundingClientRect().top + scrollPosition;
+        var screenHeight = window.innerHeight;
+
+        if (sectionPosition < screenHeight) {
+          heroSection.classList.add("show");
+        }
+
+        window.addEventListener("scroll", function () {
+          var scrollPosition = window.pageYOffset;
+          var sectionPosition =
+            heroSection.getBoundingClientRect().top + scrollPosition;
+          var screenHeight = window.innerHeight;
+
+          if (sectionPosition < screenHeight) {
+            heroSection.classList.add("show");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img class="back-image" src="./assets/photo-1589466725882-f47191476e8c.avif" alt="">
+    <header>
+      <nav class="navbar">
+        <img src="./assets/Group 79.svg" class="logo" alt="" />
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="">SERVIÇOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="">OFERTAS</a></li>
+          <li class="nav-item"><a class="nav-link" href="">CONTATO</a></li>
+          <button class="button secondary-button">
+            CONTATO &nbsp;<img
+              style="color: white"
+              src="./assets/Calling.svg"
+              alt=""
+            />
+          </button>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="hero">
+        <h1 class="main-title">
+          Seja bem vindo <br />
+          ao futuro!
+        </h1>
+        <img src="./assets/Group 81.svg" alt="" />
+        <img src="./assets/Group 83.svg" alt="" />
+
+        <p class="main-para">
+          A iboss tecnologias desenvolve sistemas e aplicativos mobile <br />
+          personalizados para cada necessidade da sua empresa
+        </p>
+        <button class="button primary-button">
+          Fale conosco &nbsp;<img
+            style="color: white"
+            src="./assets/Graph.svg"
+            alt=""
+          />
+        </button>
+        <div class="circle">
+          <div class="circle-purple">
+            <img src="./assets/Group 2arrow-down.svg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
